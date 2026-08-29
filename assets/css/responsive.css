@@ -118,3 +118,133 @@ footer li span {
     white-space: nowrap;
   }
 }
+
+/* Footer: match the header's container width and horizontal spacing exactly */
+footer {
+  overflow-x: hidden;
+}
+
+footer .container-x {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width:640px) {
+  footer .container-x {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  footer .container-x {
+    padding-inline: 2rem;
+  }
+}
+
+footer .grid {
+  column-gap: clamp(1.25rem, 2vw, 2.5rem);
+  row-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+footer .grid>div,
+footer .grid>div>p,
+footer .grid>div>ul,
+footer .grid>div>div,
+footer li,
+footer a,
+footer span,
+footer p {
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+footer .grid>div:first-child .flex.items-center.gap-3 {
+  flex-wrap: wrap;
+}
+
+footer .grid>div:first-child .flex.items-center.gap-3 a {
+  flex-shrink: 0;
+}
+
+footer li svg {
+  flex-shrink: 0;
+}
+
+@media (max-width:767px) {
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  footer .grid>div {
+    grid-column: auto !important;
+    max-width: 100%;
+  }
+
+  footer .grid>div:first-child {
+    width: 100%;
+  }
+
+  footer .grid>div:first-child .flex.items-center.gap-3 {
+    gap: .75rem;
+  }
+
+  footer ul {
+    gap: .7rem !important;
+  }
+
+  footer li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+  }
+
+  footer li>span {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  footer .mt-14.pt-6 {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  footer .mt-14.pt-6>div {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  footer .mt-14.pt-6>p,
+  footer .mt-14.pt-6>div>a {
+    text-align: center;
+  }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+  footer .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2rem 1.5rem;
+  }
+
+  footer .grid>div:first-child,
+  footer .grid>div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  footer .mt-14.pt-6 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:1024px) {
+  footer .grid {
+    gap: 2.5rem;
+  }
+}
