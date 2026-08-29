@@ -26,7 +26,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 10px;
-  --container: 1200px;
+  --container: 1160px;
   color-scheme: light;
 }
 
@@ -336,10 +336,17 @@ h4,
 
 .nav-link {
   position: relative;
-  font-size: .95rem;
+  font-size: 1rem;
+  line-height: 1.4;
   font-weight: 500;
   color: #000;
   padding: .4rem .1rem;
+}
+
+@media (max-width:1023px) {
+  .nav-link {
+    font-size: 1.05rem;
+  }
 }
 
 .nav-link:hover,
