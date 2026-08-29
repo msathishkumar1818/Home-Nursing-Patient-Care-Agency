@@ -1,0 +1,120 @@
+/* =========================================================
+   Responsive refinements beyond Tailwind's default utility
+   breakpoints. Mobile 320-767 / Tablet 768-1023 /
+   Laptop 1024-1439 / Large Desktop 1440+
+   ========================================================= */
+
+/* Prevent oversized hero type on small phones */
+@media (max-width:374px) {
+  .hero-heading {
+    font-size: 2.1rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .section-heading {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* Tablet: tighten section vertical rhythm */
+@media (min-width:768px) and (max-width:1023px) {
+  .section-pad {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* Large desktop: cap line length for long-form editorial text */
+@media (min-width:1440px) {
+  .prose-cap {
+    max-width: 640px;
+  }
+}
+
+/* Ensure the sticky header never wraps to two lines */
+@media (min-width:1024px) {
+  #site-header .header-row {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Mobile menu touch targets */
+@media (max-width:1023px) {
+
+  #mobile-menu a,
+  #mobile-menu button {
+    min-height: 44px;
+  }
+}
+
+/* Keep the open mobile menu usable on short screens. */
+@media (max-width:1023px) {
+  #mobile-menu.open {
+    max-height: calc(100svh - 58px);
+    overflow-y: auto;
+  }
+}
+
+/* Avoid horizontal scroll from decorative blobs/threads */
+.no-x-scroll {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+/* Keep long contact details inside narrow footer columns. */
+footer li span {
+  overflow-wrap: anywhere;
+}
+
+/* Timeline: switch from horizontal thread to vertical on mobile */
+@media (max-width:1023px) {
+  .thread-horizontal {
+    display: none;
+  }
+
+  .thread-vertical {
+    display: block;
+  }
+}
+
+@media (min-width:1024px) {
+  .thread-vertical {
+    display: none;
+  }
+}
+
+/* Comparison table (pricing) horizontal scroll on small screens only */
+@media (max-width:1023px) {
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-scroll table {
+    min-width: 640px;
+  }
+}
+
+@media (max-width:374px) {
+  #site-header .header-row {
+    gap: .5rem;
+  }
+
+  #site-header .header-row>a {
+    gap: .5rem;
+    min-width: 0;
+  }
+
+  #site-header .header-row>a>svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  #site-header .header-row>a>span {
+    min-width: 0;
+  }
+
+  #site-header .header-row>a>span>span {
+    white-space: nowrap;
+  }
+}

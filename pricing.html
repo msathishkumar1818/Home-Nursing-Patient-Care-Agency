@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Care Packages & Pricing · Amara Home Care</title>
+  <meta name="description"
+    content="Transparent pricing for hourly, daily, overnight, and long-term home care packages." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%2316324D%22/><path d=%22M6 17h5l2.5-6 4 12 2.5-6H26%22 stroke=%22%233E7C76%22 stroke-width=%222%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)', surface: 'var(--surface)', ink: 'var(--ink)',
+            navy: 'var(--navy)', teal: 'var(--teal)', sage: 'var(--sage)', clay: 'var(--clay)'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'ui-serif', 'serif'],
+            sans: ['Public Sans', 'ui-sans-serif', 'sans-serif']
+          },
+          maxWidth: { '8xl': '1280px' }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+</head>
+
+<body class="bg-bg text-ink font-sans">
+  <div id="page-loader" aria-hidden="true">
+    <svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="thread-path thread-line" d="M5 30 H55 L70 10 L90 50 L105 30 H175" />
+      <circle class="thread-dot" cx="70" cy="10" r="3.5" />
+      <circle class="thread-dot-alt" cx="90" cy="50" r="3.5" />
+    </svg>
+    <span class="loader-word">Amara Home Care</span>
+  </div>
+
+  <header id="site-header">
+    <div class="container-x">
+      <div class="header-row flex items-center justify-between gap-4 py-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19" cy="19" r="19" fill="#F2ECDF" />
+            <path d="M8 20h5.5l3-7 4.5 14 3-7H30" stroke="#16324D" stroke-width="2.2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span class="leading-tight">
+            <span class="block font-display text-lg font-semibold text-ink">Amara</span>
+            <span class="block text-[11px] tracking-[0.18em] uppercase text-soft -mt-0.5">Home Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-8 mx-auto" aria-label="Primary">
+          <div class="dropdown-wrap relative">
+            <button class="nav-link  flex items-center gap-1.5" aria-haspopup="true">
+              Home
+              <svg width="11" height="7" viewBox="0 0 11 7" fill="none">
+                <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dropdown-panel absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
+              <div class="bg-surface border border-line rounded-2xl shadow-lg p-2">
+                <a href="index.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-alt transition-colors">
+                  <span class="mt-1 w-2 h-2 rounded-full bg-teal shrink-0"></span>
+                  <span>
+                    <span class="block text-sm font-semibold text-ink">Home 1 — Trusted Care</span>
+                    <span class="block text-xs text-mute mt-0.5">Warm, editorial introduction</span>
+                  </span>
+                </a>
+                <a href="home-2.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-alt transition-colors">
+                  <span class="mt-1 w-2 h-2 rounded-full bg-sage shrink-0"></span>
+                  <span>
+                    <span class="block text-sm font-semibold text-ink">Home 2 — Modern Care</span>
+                    <span class="block text-xs text-mute mt-0.5">Bold, story-driven layout</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link ">About Us</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="caregivers.html" class="nav-link ">Caregivers</a>
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
+        </nav>
+
+        <!-- Right controls -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode"
+            class="icon-toggle hidden sm:inline-flex">
+            <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
+                stroke-linejoin="round" />
+            </svg>
+            <svg class="hidden dark:block" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" />
+              <path
+                d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button type="button" data-dir-toggle aria-label="Toggle text direction"
+            class="icon-toggle hidden sm:inline-flex text-[11px] font-semibold">
+            <span data-dir-label>RTL</span>
+          </button>
+          <!-- Mobile menu toggle -->
+          <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Toggle menu" class="icon-toggle lg:hidden">
+            <svg data-menu-icon-open width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <svg data-menu-icon-close class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="lg:hidden">
+        <nav class="flex flex-col gap-1 pb-6 pt-2 border-t border-line" aria-label="Mobile primary">
+          <button type="button" data-mobile-home-toggle
+            class="flex items-center justify-between py-3 text-sm font-semibold text-ink">
+            Home
+            <svg data-chevron class="transition-transform duration-200" width="11" height="7" viewBox="0 0 11 7"
+              fill="none">
+              <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div data-mobile-home-panel class="hidden pl-4 pb-2 flex flex-col gap-1">
+            <a href="index.html" class="py-2.5 text-sm text-soft">Home 1 — Trusted Care</a>
+            <a href="home-2.html" class="py-2.5 text-sm text-soft">Home 2 — Modern Care</a>
+          </div>
+          <a href="about.html" class="py-3 text-sm font-semibold text-ink border-t border-line">About Us</a>
+          <a href="services.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Services</a>
+          <a href="caregivers.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Caregivers</a>
+          <a href="pricing.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Pricing</a>
+          <a href="contact.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Contact</a>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-line mt-2">
+            <button type="button" data-theme-toggle class="icon-toggle">
+              <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="hidden dark:block" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" />
+                <path
+                  d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button type="button" data-dir-toggle class="icon-toggle text-[11px] font-semibold">
+              <span data-dir-label>RTL</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ SECTION 1 — PRICING HERO ============ -->
+    <section class="bg-alt py-16 md:py-20">
+      <div class="container-x">
+        <span class="eyebrow reveal">Care Packages &amp; Pricing</span>
+        <h1
+          class="font-display text-4xl md:text-5xl font-semibold text-black dark:text-white mt-5 max-w-2xl reveal reveal-delay-1">
+          Transparent pricing, no surprises</h1>
+        <p class="text-black dark:text-white mt-5 max-w-xl reveal reveal-delay-2">Every package includes a licensed care
+          coordinator, a written plan of care, and 24/7 support — priced clearly so you know exactly what to expect.</p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 2 — CARE PACKAGE OVERVIEW ============ -->
+    <section class="py-16 md:py-20">
+      <div class="container-x grid sm:grid-cols-3 gap-6">
+        <div class="card p-6 text-center reveal">
+          <p class="font-display text-2xl font-semibold text-navy">Hourly</p>
+          <p class="text-sm text-black dark:text-white mt-2">Pay for the visits you need, when you need them.</p>
+        </div>
+        <div class="card p-6 text-center reveal reveal-delay-1">
+          <p class="font-display text-2xl font-semibold text-navy">Daily / Overnight</p>
+          <p class="text-sm text-black dark:text-white mt-2">Extended coverage for higher-need days and nights.</p>
+        </div>
+        <div class="card p-6 text-center reveal reveal-delay-2">
+          <p class="font-display text-2xl font-semibold text-navy">Long-Term</p>
+          <p class="text-sm text-black dark:text-white mt-2">Ongoing weekly care with a dedicated caregiver team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3 — HOURLY CARE PLANS ============ -->
+    <section class="py-14 md:py-16">
+      <div class="container-x">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold text-ink reveal">Hourly Care Plans</h2>
+        <div class="mt-8 table-scroll">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="text-left border-b border-line text-black dark:text-white text-xs uppercase tracking-wide">
+                <th class="py-3 font-semibold">Plan</th>
+                <th class="py-3 font-semibold">Duration</th>
+                <th class="py-3 font-semibold">Suitable For</th>
+                <th class="py-3 font-semibold">Included</th>
+                <th class="py-3 font-semibold text-right">Pricing</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-line">
+              <tr class="reveal">
+                <td class="py-5 font-medium text-black dark:text-white">Companion Visit</td>
+                <td class="py-5 text-black dark:text-white">3 hr minimum</td>
+                <td class="py-5 text-black dark:text-white">Companionship, errands, light help</td>
+                <td class="py-5 text-black dark:text-white">Care coordinator, visit notes</td>
+                <td class="py-5 text-right font-semibold text-navy">$34/hr</td>
+              </tr>
+              <tr class="reveal reveal-delay-1">
+                <td class="py-5 font-medium text-black dark:text-white">Personal Care Visit</td>
+                <td class="py-5 text-black dark:text-white">3 hr minimum</td>
+                <td class="py-5 text-black dark:text-white">Bathing, mobility, hygiene support</td>
+                <td class="py-5 text-black dark:text-white">Certified aide, vitals check</td>
+                <td class="py-5 text-right font-semibold text-navy">$42/hr</td>
+              </tr>
+              <tr class="reveal reveal-delay-2">
+                <td class="py-5 font-medium text-black dark:text-white">Skilled Nursing Visit</td>
+                <td class="py-5 text-black dark:text-white">1 hr minimum</td>
+                <td class="py-5 text-black dark:text-white">Wound care, IV therapy, medication</td>
+                <td class="py-5 text-black dark:text-white">RN/LPN, clinical documentation</td>
+                <td class="py-5 text-right font-semibold text-navy">$68/hr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4 — DAILY CARE PLANS ============ -->
+    <section class="py-14 md:py-16 bg-alt">
+      <div class="container-x">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold text-ink reveal">Daily &amp; Overnight Care Plans
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div class="card p-7 reveal">
+            <p class="text-xs font-semibold uppercase tracking-wide text-black dark:text-white">Half-Day Care</p>
+            <p class="font-display text-3xl font-semibold text-navy mt-2">$150<span
+                class="text-sm font-sans font-normal text-mute">/6 hrs</span></p>
+            <p class="text-sm text-black dark:text-white mt-3">Ideal for daytime supervision, appointments, and family
+              respite.</p>
+          </div>
+          <div class="card p-7 reveal reveal-delay-1">
+            <p class="text-xs font-semibold uppercase tracking-wide text-black dark:text-white">Full-Day Care</p>
+            <p class="font-display text-3xl font-semibold text-navy mt-2">$260<span
+                class="text-sm font-sans font-normal text-mute">/12 hrs</span></p>
+            <p class="text-sm text-black dark:text-white mt-3">Continuous daytime coverage for higher-need patients.</p>
+          </div>
+          <div class="card p-7 reveal reveal-delay-2">
+            <p class="text-xs font-semibold uppercase tracking-wide text-black dark:text-white">Overnight Care</p>
+            <p class="font-display text-3xl font-semibold text-navy mt-2">$220<span
+                class="text-sm font-sans font-normal text-mute">/night</span></p>
+            <p class="text-sm text-black dark:text-white mt-3">Awake or sleep-optional overnight support for safety and
+              peace of mind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5 — LONG-TERM CARE OPTIONS ============ -->
+    <section class="py-14 md:py-16">
+      <div class="container-x grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 reveal">
+          <h2 class="font-display text-2xl md:text-3xl font-semibold text-black dark:text-white">Long-Term Care Options
+          </h2>
+          <p class="dark:text-white mt-4 leading-relaxed">For chronic conditions or ongoing aging-in-place support, we
+            build a weekly schedule with a consistent caregiver team and a discounted long-term rate.</p>
+          <ul class="mt-5 space-y-2 text-sm text-black dark:text-white">
+            <li class="flex gap-2"><span class="text-teal">—</span> Dedicated, consistent caregiver team</li>
+            <li class="flex gap-2"><span class="text-teal">—</span> Monthly care-plan review with an RN</li>
+            <li class="flex gap-2"><span class="text-teal">—</span> Discounted weekly / monthly rates</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 reveal reveal-delay-2">
+          <div class="card p-8 text-center">
+            <p class="text-xs font-semibold uppercase tracking-wide text-black dark:text-white">Long-Term Care</p>
+            <p class="font-display text-3xl font-semibold text-navy mt-2">Custom Quote</p>
+            <p class="text-sm text-black dark:text-white mt-3">Pricing depends on weekly hours and clinical needs.</p>
+            <a href="contact.html" class="btn btn-primary w-full mt-6">Get a Custom Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ========================================================= -->
+    <!-- SECTION — WHAT'S INCLUDED / CARE JOURNEY -->
+    <!-- ========================================================= -->
+    <section class="relative overflow-hidden bg-[#F4F1EB] py-20
+         dark:bg-[#111817]
+         sm:py-24 lg:py-32">
+
+      <div class="container-x">
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+
+          <div class="lg:col-span-7 reveal">
+
+            <span class="inline-flex items-center gap-3
+                 text-[10px] font-bold uppercase
+                 tracking-[0.22em] text-teal
+                 sm:text-xs">
+              <span class="h-px w-8 bg-teal"></span>
+              What's Included
+            </span>
+
+            <h2 class="mt-5 max-w-3xl font-display
+                 text-4xl font-semibold
+                 leading-[1.05]
+                 text-black
+                 dark:text-white
+                 sm:text-5xl
+                 lg:text-6xl">
+              More than a care plan.
+              <span class="italic text-teal">
+                A complete support system.
+              </span>
+            </h2>
+
+          </div>
+
+
+          <p class="max-w-md text-sm leading-7
+               text-black
+               dark:text-white
+               lg:col-span-5 lg:justify-self-end">
+            From your first conversation to ongoing support,
+            our team stays connected so your family never has
+            to navigate care alone.
+          </p>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- JOURNEY LINE -->
+        <!-- ================================================= -->
+        <div class="relative mt-14
+             border-t border-black/10
+             dark:border-white/10
+             lg:mt-20">
+
+          <!-- Desktop Progress Line -->
+          <div class="absolute left-0 right-0 top-[-1px]
+               hidden h-px bg-teal/40
+               lg:block"></div>
+
+
+          <div class="grid
+               sm:grid-cols-2
+               lg:grid-cols-4">
+
+
+            <!-- ================================================= -->
+            <!-- STEP 01 -->
+            <!-- ================================================= -->
+            <div class="group relative
+                 border-b border-black/10
+                 py-8
+                 sm:border-r sm:px-7
+                 lg:min-h-[300px]
+                 lg:border-b-0
+                 lg:px-8
+                 lg:pt-10
+                 dark:border-white/10
+                 reveal">
+
+              <!-- Dot -->
+              <span class="absolute left-0 top-[-5px]
+                   hidden h-2.5 w-2.5
+                   rounded-full bg-teal
+                   lg:block"></span>
+
+
+              <span class="font-display text-5xl font-semibold
+                   text-black
+                   dark:text-white
+                   transition duration-300
+                   group-hover:text-teal/30">
+                01
+              </span>
+
+
+              <h3 class="mt-7 font-display
+                   text-2xl font-semibold
+                   text-black
+                   dark:text-white">
+                Personal Assessment
+              </h3>
+
+
+              <p class="mt-4 text-sm leading-6
+                   text-black
+                   dark:text-white">
+                We begin by understanding your loved one's
+                health, routine, preferences, and specific
+                care requirements.
+              </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- STEP 02 -->
+            <!-- ================================================= -->
+            <div class="group relative
+                 border-b border-black/10
+                 py-8
+                 sm:px-7
+                 lg:min-h-[300px]
+                 lg:border-b-0
+                 lg:border-r
+                 lg:px-8
+                 lg:pt-10
+                 dark:border-white/10
+                 reveal reveal-delay-1">
+
+              <span class="absolute left-0 top-[-5px]
+                   hidden h-2.5 w-2.5
+                   rounded-full bg-teal
+                   lg:block"></span>
+
+
+              <span class="font-display text-5xl font-semibold
+                   text-black
+                   dark:text-white
+                   transition duration-300
+                   group-hover:text-teal/30">
+                02
+              </span>
+
+
+              <h3 class="mt-7 font-display
+                   text-2xl font-semibold
+                   text-black
+                   dark:text-white">
+                Care Matching
+              </h3>
+
+
+              <p class="mt-4 text-sm leading-6
+                   text-black
+                   dark:text-white">
+                We match your family with a suitable,
+                background-verified professional based on
+                experience and care needs.
+              </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- STEP 03 -->
+            <!-- ================================================= -->
+            <div class="group relative
+                 border-b border-black/10
+                 py-8
+                 sm:border-r sm:px-7
+                 lg:min-h-[300px]
+                 lg:border-b-0
+                 lg:px-8
+                 lg:pt-10
+                 dark:border-white/10
+                 reveal reveal-delay-2">
+
+              <span class="absolute left-0 top-[-5px]
+                   hidden h-2.5 w-2.5
+                   rounded-full bg-teal
+                   lg:block"></span>
+
+
+              <span class="font-display text-5xl font-semibold
+                   text-black
+                   dark:text-white
+                   transition duration-300
+                   group-hover:text-teal/30">
+                03
+              </span>
+
+
+              <h3 class="mt-7 font-display
+                   text-2xl font-semibold
+                   text-black
+                   dark:text-white">
+                Care At Home
+              </h3>
+
+
+              <p class="mt-4 text-sm leading-6
+                   text-black
+                   dark:text-white">
+                Your care professional arrives at the scheduled
+                time and delivers thoughtful, dependable support
+                in familiar surroundings.
+              </p>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- STEP 04 -->
+            <!-- ================================================= -->
+            <div class="group relative
+                 py-8
+                 sm:px-7
+                 lg:min-h-[300px]
+                 lg:px-8
+                 lg:pt-10
+                 reveal reveal-delay-3">
+
+              <span class="absolute left-0 top-[-5px]
+                   hidden h-2.5 w-2.5
+                   rounded-full bg-teal
+                   lg:block"></span>
+
+
+              <span class="font-display text-5xl font-semibold
+                   text-black
+                   dark:text-white
+                   transition duration-300
+                   group-hover:text-teal/30">
+                04
+              </span>
+
+
+              <h3 class="mt-7 font-display
+                   text-2xl font-semibold
+                   text-black
+                   dark:text-white">
+                Ongoing Support
+              </h3>
+
+
+              <p class="mt-4 text-sm leading-6
+                   text-black
+                   dark:text-white">
+                Our care team remains available to answer
+                questions, adjust services, and support your
+                family as needs change.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM HIGHLIGHT -->
+        <!-- ================================================= -->
+        <div class="mt-12 flex flex-col gap-6
+             border-t border-black/10
+             pt-7
+             dark:border-white/10
+             sm:flex-row sm:items-center
+             sm:justify-between">
+
+          <div>
+
+            <p class="text-xs font-bold uppercase
+                 tracking-[0.18em] text-teal">
+              One team. One point of contact.
+            </p>
+
+            <p class="mt-2 font-display text-xl
+                 text-black
+                 dark:text-white
+                 sm:text-2xl">
+              Simple for your family.
+              <span class="italic text-teal">
+                Reassuring every step.
+              </span>
+            </p>
+
+          </div>
+
+
+          <a href="contact.html" class="group inline-flex w-fit
+               items-center gap-3
+               text-sm font-semibold
+               text-black
+               dark:text-white">
+
+            Start a care conversation
+
+            <span class="flex h-9 w-9 items-center justify-center
+                 rounded-full
+                 border border-black/15
+                 transition duration-300
+                 group-hover:translate-x-1
+                 group-hover:border-teal
+                 group-hover:text-teal
+                 dark:border-white/20">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- PRICING — CARE PLANS -->
+    <!-- ========================================================= -->
+    <section class="relative overflow-hidden bg-surface py-20 sm:py-24 lg:py-28 dark:bg-[#111817]">
+
+      <!-- Background decoration -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+
+        <div class="absolute -right-40 top-20 h-[420px] w-[420px]
+             rounded-full border border-teal/10
+             dark:border-white/5"></div>
+
+        <div class="absolute bottom-10 left-[10%] h-2 w-2
+             rounded-full bg-teal/40"></div>
+
+      </div>
+
+
+      <div class="container-x relative z-10">
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+        <div class="mx-auto max-w-3xl text-center reveal">
+
+          <span class="inline-flex items-center gap-3
+               text-[10px] font-bold uppercase
+               tracking-[0.22em] text-teal
+               sm:text-xs">
+
+            <span class="h-px w-8 bg-teal"></span>
+
+            Flexible Care Plans
+
+            <span class="h-px w-8 bg-teal"></span>
+
+          </span>
+
+
+          <h2 class="mt-5 font-display
+               text-4xl font-semibold
+               leading-[1.05]
+               text-black
+               dark:text-white
+               sm:text-5xl
+               lg:text-6xl">
+            Care that fits
+            <span class="italic text-teal">
+              your life.
+            </span>
+          </h2>
+
+
+          <p class="mx-auto mt-6 max-w-2xl
+               text-sm leading-7
+               text-black
+               dark:text-white
+               sm:text-base sm:leading-8">
+            Choose the level of support that works best for your family.
+            From occasional assistance to ongoing professional care,
+            every plan is designed around your needs.
+          </p>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- PRICING GRID -->
+        <!-- ================================================= -->
+        <div class="mt-14 grid gap-6
+             md:grid-cols-2
+             lg:grid-cols-3
+             lg:gap-7">
+
+
+          <!-- ================================================= -->
+          <!-- PLAN 01 -->
+          <!-- ================================================= -->
+          <div class="group relative
+               flex flex-col
+               border border-black/10
+               bg-white
+               p-7
+               transition duration-300
+               hover:-translate-y-2
+               hover:shadow-xl
+               dark:border-white/10
+               dark:bg-white/[0.04]
+               sm:p-8">
+
+            <span class="text-[10px] font-bold uppercase
+                 tracking-[0.2em] text-teal">
+              Occasional Care
+            </span>
+
+
+            <h3 class="mt-4 font-display
+                 text-3xl font-semibold
+                 text-black
+                 dark:text-white">
+              Essential
+            </h3>
+
+
+            <p class="mt-3 text-sm leading-6
+                 text-black
+                 dark:text-white">
+              Flexible support when you need an extra helping hand.
+            </p>
+
+
+            <!-- Price -->
+            <div class="mt-8 flex items-end gap-2">
+
+              <span class="font-display
+                   text-5xl font-semibold
+                   text-black
+                   dark:text-white">
+                $29
+              </span>
+
+              <span class="mb-2 text-xs
+                   text-black
+                   dark:text-white">
+                / hour
+              </span>
+
+            </div>
+
+
+            <!-- Divider -->
+            <div class="my-8 h-px
+                 bg-black/10
+                 dark:bg-white/10"></div>
+
+
+            <!-- Features -->
+            <ul class="space-y-4">
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black
+                     dark:text-white">
+                  Flexible hourly booking
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black
+                     dark:text-white">
+                  Verified care professionals
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black
+                     dark:text-white">
+                  Personalized support
+                </span>
+
+              </li>
+
+            </ul>
+
+
+            <!-- Button -->
+            <a href="contact.html" class="mt-9 inline-flex items-center
+                 justify-center rounded-full
+                 border border-black/15
+                 px-5 py-3
+                 text-sm font-semibold
+                 text-black
+                 transition duration-300
+                 hover:bg-black
+                 hover:text-white
+                 dark:border-white/20
+                 dark:text-white
+                 dark:hover:bg-white
+                 dark:hover:text-black">
+              Choose Essential
+            </a>
+
+          </div>
+
+
+
+          <!-- ================================================= -->
+          <!-- PLAN 02 — FEATURED -->
+          <!-- ================================================= -->
+          <div class="relative flex flex-col
+               bg-[#102522]
+               p-7
+               text-white
+               shadow-2xl
+               transition duration-300
+               hover:-translate-y-2
+               sm:p-8">
+
+            <!-- Popular -->
+            <div class="absolute right-6 top-6
+                 rounded-full
+                 bg-[#D59A7B]
+                 px-3 py-1
+                 text-[9px] font-bold uppercase
+                 tracking-wider text-[#102522]">
+              Most Popular
+            </div>
+
+
+            <span class="text-[10px] font-bold uppercase
+                 tracking-[0.2em] text-[#AFC8BE]">
+              Regular Support
+            </span>
+
+
+            <h3 class="mt-4 font-display
+                 text-3xl font-semibold">
+              Comfort
+            </h3>
+
+
+            <p class="mt-3 text-sm leading-6 text-white">
+              Consistent care designed for everyday peace of mind.
+            </p>
+
+
+            <!-- Price -->
+            <div class="mt-8 flex items-end gap-2">
+
+              <span class="font-display
+                   text-5xl font-semibold">
+                $499
+              </span>
+
+              <span class="mb-2 text-xs text-white">
+                / month
+              </span>
+
+            </div>
+
+
+            <div class="my-8 h-px bg-white/10"></div>
+
+
+            <!-- Features -->
+            <ul class="space-y-4">
+
+              <li class="flex gap-3">
+
+                <span class="text-[#AFC8BE]">✓</span>
+
+                <span class="text-sm text-white">
+                  Up to 20 care hours
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-[#AFC8BE]">✓</span>
+
+                <span class="text-sm text-white">
+                  Dedicated care coordinator
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-[#AFC8BE]">✓</span>
+
+                <span class="text-sm text-white">
+                  Flexible weekly scheduling
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-[#AFC8BE]">✓</span>
+
+                <span class="text-sm text-white">
+                  Priority support
+                </span>
+
+              </li>
+
+            </ul>
+
+
+            <!-- Button -->
+            <a href="contact.html" class="mt-9 inline-flex items-center
+                 justify-center rounded-full
+                 bg-white
+                 px-5 py-3
+                 text-sm font-semibold
+                 text-[#102522]
+                 transition duration-300
+                 hover:bg-[#AFC8BE]">
+              Choose Comfort
+            </a>
+
+          </div>
+
+
+
+          <!-- ================================================= -->
+          <!-- PLAN 03 -->
+          <!-- ================================================= -->
+          <div class="group relative
+               flex flex-col
+               border border-black/10
+               bg-white
+               p-7
+               transition duration-300
+               hover:-translate-y-2
+               hover:shadow-xl
+               dark:border-white/10
+               dark:bg-white/[0.04]
+               sm:p-8">
+
+            <span class="text-[10px] font-bold uppercase
+                 tracking-[0.2em] text-teal">
+              Complete Care
+            </span>
+
+
+            <h3 class="mt-4 font-display
+                 text-3xl font-semibold
+                 text-black
+                 dark:text-white">
+              Complete
+            </h3>
+
+
+            <p class="mt-3 text-sm leading-6
+                 text-black
+                 dark:text-white">
+              Comprehensive care built around complex and ongoing needs.
+            </p>
+
+
+            <!-- Price -->
+            <div class="mt-8 flex items-end gap-2">
+
+              <span class="font-display
+                   text-5xl font-semibold
+                   text-black
+                   dark:text-white">
+                Custom
+              </span>
+
+            </div>
+
+
+            <div class="my-8 h-px
+                 bg-black/10
+                 dark:bg-white/10"></div>
+
+
+            <!-- Features -->
+            <ul class="space-y-4">
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black/
+                     dark:text-white">
+                  Fully customized care plan
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black
+                     dark:text-white">
+                  Specialized care professionals
+                </span>
+
+              </li>
+
+
+              <li class="flex gap-3">
+
+                <span class="text-teal">✓</span>
+
+                <span class="text-sm text-black
+                     dark:text-white">
+                  Ongoing family coordination
+                </span>
+
+              </li>
+
+            </ul>
+
+
+            <!-- Button -->
+            <a href="contact.html" class="mt-9 inline-flex items-center
+                 justify-center rounded-full
+                 border border-black/15
+                 px-5 py-3
+                 text-sm font-semibold
+                 text-black
+                 transition duration-300
+                 hover:bg-black
+                 hover:text-white
+                 dark:border-white/20
+                 dark:text-white
+                 dark:hover:bg-white
+                 dark:hover:text-black">
+              Talk to Our Team
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- FOOTNOTE -->
+        <!-- ================================================= -->
+        <div class="mt-10 flex flex-col items-center
+             justify-between gap-4
+             border-t border-black/10
+             pt-6
+             text-center
+             dark:border-white/10
+             md:flex-row
+             md:text-left">
+
+          <p class="text-xs leading-6
+               text-black
+               dark:text-white">
+            Every family's needs are different. Final pricing may vary
+            based on location, care requirements, and service duration.
+          </p>
+
+
+          <a href="contact.html" class="text-xs font-semibold text-teal
+               hover:underline">
+            Need help choosing a plan?
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============ SECTION 6 — WHAT'S INCLUDED ============ -->
+    <section class="py-16 md:py-20 bg-alt">
+      <div class="container-x">
+        <h2 class="font-display text-2xl md:text-3xl font-semibold text-black dark:text-white reveal">What's included in
+          every package</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div class="flex items-start gap-3 reveal"><svg class="mt-1 shrink-0" width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="9" />
+            </svg><span class="text-sm text-black dark:text-white">Dedicated care coordinator</span></div>
+          <div class="flex items-start gap-3 reveal reveal-delay-1"><svg class="mt-1 shrink-0" width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="9" />
+            </svg><span class="text-sm text-black dark:text-white">Written, physician-aligned plan</span></div>
+          <div class="flex items-start gap-3 reveal reveal-delay-2"><svg class="mt-1 shrink-0" width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="9" />
+            </svg><span class="text-sm text-black dark:text-white">24/7 care-line access</span></div>
+          <div class="flex items-start gap-3 reveal reveal-delay-3"><svg class="mt-1 shrink-0" width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="9" />
+            </svg><span class="text-sm text-black dark:text-white">No long-term contracts</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7 — PRICING CTA ============ -->
+    <section class="py-20 md:py-28">
+      <div class="container-x text-center reveal">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-black dark:text-white max-w-lg mx-auto">Not sure
+          which package is right?</h2>
+        <p class="text-black dark:text-white mt-3 max-w-md mx-auto">Talk to a care coordinator — we'll recommend a plan
+          based on your family's exact needs.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <a href="contact.html" class="btn btn-primary">Get a Free Consultation</a>
+          <a href="tel:+18005550138" class="btn btn-outline">Call the Care Line</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+  <footer class="bg-navy dark:bg-black">
+    <div class="container-x py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+
+        <div class="md:col-span-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="19" cy="19" r="19" fill="#F2ECDF" />
+              <path d="M8 20h5.5l3-7 4.5 14 3-7H30" stroke="#16324D" stroke-width="2.2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-semibold text-white">Amara</span>
+              <span class="block text-[11px] tracking-[0.18em] uppercase text-white -mt-0.5">Home Care</span>
+            </span>
+          </a>
+          <p class="mt-5 text-sm text-white leading-relaxed max-w-xs">
+            Licensed nursing and personal care delivered in the comfort of home, guided by qualified caregivers your
+            family can trust.
+          </p>
+          <div class="flex items-center gap-3 mt-6">
+            <a href="#" aria-label="Facebook"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.5 0-4.2 1.5-4.2 4.3v2.5H7.3V13h2.7v8h3.5z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.2" cy="6.8" r="1" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2 2 0 110 4 2 2 0 010-4zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.8c0-1.38-.02-3.15-1.92-3.15-1.93 0-2.22 1.5-2.22 3.05V21h-4z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <p class="text-white text-sm font-semibold mb-4">Explore</p>
+          <ul class="space-y-2.5 text-sm text-white">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home 1</a></li>
+            <li><a href="home-2.html" class="hover:text-white transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="caregivers.html" class="hover:text-white transition-colors">Caregivers</a></li>
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="text-white text-sm font-semibold mb-4">Care Services</p>
+          <ul class="space-y-2.5 text-sm text-white">
+            <li><a href="services.html" class="hover:text-white transition-colors">Post-Surgery Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Elderly Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Physiotherapy Assistance</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">IV Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Wound Dressing</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="text-white text-sm font-semibold mb-4">Reach Our Care Team</p>
+          <ul class="space-y-3 text-sm text-white">
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path
+                  d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 2.9a2 2 0 01-.4 2.1L8 10a16 16 0 006 6l1.3-1.4a2 2 0 012.1-.4c.9.4 1.9.6 2.9.7a2 2 0 011.7 2z" />
+              </svg>
+              <span>+1 (800) 555-0138 — 24/7 Care Line</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path d="M4 5h16v14H4z" />
+                <path d="M4 6l8 7 8-7" />
+              </svg>
+              <span>care@amarahomecare.example</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path d="M12 21s7-6.3 7-11.5A7 7 0 105 9.5C5 14.7 12 21 12 21z" />
+                <circle cx="12" cy="9.5" r="2.3" />
+              </svg>
+              <span>Serving the greater metro area &amp; suburbs</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.2 1.9" />
+              </svg>
+              <span>Care office: Mon–Sat, 8am–7pm · Emergency line 24/7</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white">© <span data-year>2026</span> Amara Home Care. All rights reserved.</p>
+        <div class="flex items-center gap-5 text-xs text-white">
+          <a class="hover:text-white transition-colors">Privacy Policy</a>
+          <a class="hover:text-white transition-colors">Terms of Service</a>
+          <a class="hover:text-white transition-colors">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5" />
+      <path d="M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us · Amara Home Care</title>
+  <meta name="description"
+    content="Learn about Amara Home Care's story, mission, values, and commitment to patient safety." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%2316324D%22/><path d=%22M6 17h5l2.5-6 4 12 2.5-6H26%22 stroke=%22%233E7C76%22 stroke-width=%222%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)', surface: 'var(--surface)', ink: 'var(--ink)',
+            navy: 'var(--navy)', teal: 'var(--teal)', sage: 'var(--sage)', clay: 'var(--clay)'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'ui-serif', 'serif'],
+            sans: ['Public Sans', 'ui-sans-serif', 'sans-serif']
+          },
+          maxWidth: { '8xl': '1280px' }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+</head>
+
+<body class="bg-bg text-ink font-sans">
+  <div id="page-loader" aria-hidden="true">
+    <svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="thread-path thread-line" d="M5 30 H55 L70 10 L90 50 L105 30 H175" />
+      <circle class="thread-dot" cx="70" cy="10" r="3.5" />
+      <circle class="thread-dot-alt" cx="90" cy="50" r="3.5" />
+    </svg>
+    <span class="loader-word">Amara Home Care</span>
+  </div>
+
+  <header id="site-header">
+    <div class="container-x">
+      <div class="header-row flex items-center justify-between gap-4 py-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19" cy="19" r="19" fill="#F2ECDF" />
+            <path d="M8 20h5.5l3-7 4.5 14 3-7H30" stroke="#16324D" stroke-width="2.2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span class="leading-tight">
+            <span class="block font-display text-lg font-semibold text-ink">Amara</span>
+            <span class="block text-[11px] tracking-[0.18em] uppercase text-soft -mt-0.5">Home Care</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-8 mx-auto" aria-label="Primary">
+          <div class="dropdown-wrap relative">
+            <button class="nav-link  flex items-center gap-1.5" aria-haspopup="true">
+              Home
+              <svg width="11" height="7" viewBox="0 0 11 7" fill="none">
+                <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dropdown-panel absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64">
+              <div class="bg-surface border border-line rounded-2xl shadow-lg p-2">
+                <a href="index.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-alt transition-colors">
+                  <span class="mt-1 w-2 h-2 rounded-full bg-teal shrink-0"></span>
+                  <span>
+                    <span class="block text-sm font-semibold text-ink">Home 1 — Trusted Care</span>
+                    <span class="block text-xs text-mute mt-0.5">Warm, editorial introduction</span>
+                  </span>
+                </a>
+                <a href="home-2.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-alt transition-colors">
+                  <span class="mt-1 w-2 h-2 rounded-full bg-sage shrink-0"></span>
+                  <span>
+                    <span class="block text-sm font-semibold text-ink">Home 2 — Modern Care</span>
+                    <span class="block text-xs text-mute mt-0.5">Bold, story-driven layout</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link active">About Us</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="caregivers.html" class="nav-link ">Caregivers</a>
+          <a href="pricing.html" class="nav-link ">Pricing</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
+        </nav>
+
+        <!-- Right controls -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode"
+            class="icon-toggle hidden sm:inline-flex">
+            <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
+                stroke-linejoin="round" />
+            </svg>
+            <svg class="hidden dark:block" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" />
+              <path
+                d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button type="button" data-dir-toggle aria-label="Toggle text direction"
+            class="icon-toggle hidden sm:inline-flex text-[11px] font-semibold">
+            <span data-dir-label>RTL</span>
+          </button>
+          <!-- Mobile menu toggle -->
+          <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Toggle menu" class="icon-toggle lg:hidden">
+            <svg data-menu-icon-open width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <svg data-menu-icon-close class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="lg:hidden">
+        <nav class="flex flex-col gap-1 pb-6 pt-2 border-t border-line" aria-label="Mobile primary">
+          <button type="button" data-mobile-home-toggle
+            class="flex items-center justify-between py-3 text-sm font-semibold text-ink">
+            Home
+            <svg data-chevron class="transition-transform duration-200" width="11" height="7" viewBox="0 0 11 7"
+              fill="none">
+              <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div data-mobile-home-panel class="hidden pl-4 pb-2 flex flex-col gap-1">
+            <a href="index.html" class="py-2.5 text-sm text-soft">Home 1 — Trusted Care</a>
+            <a href="home-2.html" class="py-2.5 text-sm text-soft">Home 2 — Modern Care</a>
+          </div>
+          <a href="about.html" class="py-3 text-sm font-semibold text-ink border-t border-line">About Us</a>
+          <a href="services.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Services</a>
+          <a href="caregivers.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Caregivers</a>
+          <a href="pricing.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Pricing</a>
+          <a href="contact.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Contact</a>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-line mt-2">
+            <button type="button" data-theme-toggle class="icon-toggle">
+              <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="hidden dark:block" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" />
+                <path
+                  d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button type="button" data-dir-toggle class="icon-toggle text-[11px] font-semibold">
+              <span data-dir-label>RTL</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ SECTION 1 — PAGE HERO ============ -->
+    <section class="bg-alt py-16 md:py-20">
+      <div class="container-x">
+        <span class="eyebrow reveal">About Amara</span>
+        <h1
+          class="font-display text-4xl md:text-5xl font-semibold text-black dark:text-white mt-5 max-w-2xl reveal reveal-delay-1">
+          A care agency founded on one belief: home is where healing happens best.
+        </h1>
+        <p class="text-black dark:text-white mt-5 max-w-xl reveal reveal-delay-2">
+          For over a decade, Amara has connected families with licensed nurses and caregivers who bring hospital-grade
+          skill into the comfort of home.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 2 — OUR STORY (split image/content) ============ -->
+    <section class="py-20 md:py-28">
+      <div class="container-x grid lg:grid-cols-12 gap-14 items-center">
+        <div class="lg:col-span-6 reveal">
+          <img src="../assets/images/p18.jpg" alt="Founding nurse of Amara Home Care with a patient"
+            class="rounded-[var(--radius-lg)] w-full aspect-[4/3] object-cover shadow-[var(--shadow)]" />
+        </div>
+        <div class="lg:col-span-6 reveal reveal-delay-2">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="font-display text-3xl font-semibold text-black dark:text-white mt-4">Started at one kitchen table,
+            by one worried family</h2>
+          <p class="text-black dark:text-white mt-5 leading-relaxed">
+            Amara began when our founder, a home-health nurse, couldn't find a single agency she trusted enough to care
+            for her own mother. So she built one — starting with three caregivers and a shared commitment to treat every
+            client like family.
+          </p>
+          <p class="text-black dark:text-white mt-4 leading-relaxed">
+            Today that same standard guides every match we make, every visit we schedule, and every plan of care we
+            write.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3 — MISSION & VALUES (values grid) ============ -->
+    <section class="py-20 md:py-28 bg-alt">
+      <div class="container-x">
+        <span class="eyebrow">Mission &amp; Values</span>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-ink mt-4 max-w-lg reveal">What guides every
+          visit we make</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div class="reveal">
+            <span class="font-display text-2xl text-mute">01</span>
+            <h3 class="font-semibold text-black dark:text-white mt-3">Compassion First</h3>
+            <p class="text-sm text-black dark:text-white mt-2">Care decisions start with the patient's comfort and
+              dignity.</p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <span class="font-display text-2xl text-mute">02</span>
+            <h3 class="font-semibold text-black dark:text-white mt-3">Clinical Integrity</h3>
+            <p class="text-sm text-black dark:text-white mt-2">Every procedure follows licensed, evidence-based
+              protocol.</p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <span class="font-display text-2xl text-mute">03</span>
+            <h3 class="font-semibold text-black dark:text-white mt-3">Radical Transparency</h3>
+            <p class="text-sm text-black dark:text-white mt-2">Families see care notes and progress, not just invoices.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <span class="font-display text-2xl text-mute">04</span>
+            <h3 class="font-semibold text-black dark:text-white mt-3">Consistency of Care</h3>
+            <p class="text-sm text-black dark:text-white mt-2">Familiar faces, not rotating strangers, whenever
+              possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4 — CARE PHILOSOPHY (large typography) ============ -->
+    <section class="py-24 md:py-32">
+      <div class="container-x">
+        <p
+          class="font-display text-2xl sm:text-3xl md:text-4xl leading-[1.4] text-black dark:text-white max-w-3xl reveal">
+          We don't just manage symptoms — we protect the parts of daily life that make someone feel like <span
+            class="text-teal italic">themselves</span>: their routines, their home, their independence.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5 — PATIENT SAFETY COMMITMENT (split, reversed) ============ -->
+    <section class="py-20 md:py-28 bg-alt">
+      <div class="container-x grid lg:grid-cols-12 gap-14 items-center">
+        <div class="lg:col-span-6 reveal order-2 lg:order-1">
+          <span class="eyebrow">Patient Safety Commitment</span>
+          <h2 class="font-display text-3xl font-semibold text-black dark:text-white mt-4">Safety isn't a department —
+            it's every step</h2>
+          <ul class="mt-6 space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)"
+                stroke-width="1.8">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              <span class="text-sm text-black dark:text-white">Multi-stage background checks renewed annually for every
+                caregiver.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)"
+                stroke-width="1.8">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              <span class="text-sm text-black dark:text-white">Registered nurse oversight for every clinical care
+                plan.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)"
+                stroke-width="1.8">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              <span class="text-sm text-black dark:text-white">Scheduled supervisory visits to review care quality
+                in-home.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 order-1 lg:order-2 reveal reveal-delay-2">
+          <img src="../assets/images/p19.jpg" alt="Nurse reviewing patient safety checklist"
+            class="rounded-[var(--radius-lg)] w-full aspect-[4/3] object-cover shadow-[var(--shadow)]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6 — TEAM EXPERIENCE STATISTICS ============ -->
+    <section class="py-20 md:py-28">
+      <div class="container-x">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="reveal">
+            <p class="stat-num text-4xl md:text-5xl font-semibold text-navy"><span data-counter="180"
+                data-suffix="+">0+</span></p>
+            <p class="text-sm text-black dark:text-white mt-2">Caregivers on our team</p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <p class="stat-num text-4xl md:text-5xl font-semibold text-navy"><span data-counter="12"
+                data-suffix=" yrs">0 yrs</span></p>
+            <p class="text-sm text-black dark:text-white mt-2">Average caregiver experience</p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <p class="stat-num text-4xl md:text-5xl font-semibold text-navy"><span data-counter="4200"
+                data-suffix="+">0+</span></p>
+            <p class="text-sm text-black dark:text-white mt-2">Families served since 2013</p>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <p class="stat-num text-4xl md:text-5xl font-semibold text-navy"><span data-counter="98"
+                data-suffix="%">0%</span></p>
+            <p class="text-sm text-black dark:text-white mt-2">Client satisfaction rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================= -->
+    <!-- ABOUT — CARE IS A RELATIONSHIP -->
+    <!-- ========================================================= -->
+    <section class="relative overflow-hidden bg-white py-20 dark:bg-[#101716] md:py-28 lg:py-36">
+
+      <div class="container-x">
+
+        <!-- ================================================= -->
+        <!-- HEADING -->
+        <!-- ================================================= -->
+        <div class="mx-auto max-w-3xl text-center reveal">
+
+          <span class="inline-flex items-center gap-3
+               text-[10px] font-bold uppercase
+               tracking-[0.22em] text-teal sm:text-xs">
+            <span class="h-px w-8 bg-teal"></span>
+            What We Believe
+            <span class="h-px w-8 bg-teal"></span>
+          </span>
+
+          <h2 class="mt-5 font-display
+               text-4xl font-semibold
+               leading-[1.04]
+               text-black dark:text-white
+               sm:text-5xl lg:text-6xl">
+            Care is not a task.
+            <br />
+            <span class="italic text-teal">
+              It's a relationship.
+            </span>
+          </h2>
+
+          <p class="mx-auto mt-6 max-w-2xl
+               text-sm leading-7
+               text-black
+               dark:text-white
+               sm:text-base">
+            The strongest care grows from trust,
+            consistency, and genuine human connection.
+            That is what we bring into every home.
+          </p>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- VISUAL STORY -->
+        <!-- ================================================= -->
+        <div class="relative mx-auto mt-16
+             max-w-6xl md:mt-20">
+
+          <!-- Decorative Circle -->
+          <div class="pointer-events-none absolute
+               left-1/2 top-1/2
+               hidden h-[620px] w-[620px]
+               -translate-x-1/2
+               -translate-y-1/2
+               rounded-full
+               border border-teal/10
+               lg:block"></div>
+
+          <div class="pointer-events-none absolute
+               left-1/2 top-1/2
+               hidden h-[480px] w-[480px]
+               -translate-x-1/2
+               -translate-y-1/2
+               rounded-full
+               border border-teal/10
+               lg:block"></div>
+
+
+          <div class="grid items-center gap-10
+               lg:grid-cols-12 lg:gap-8">
+
+            <!-- ================================================= -->
+            <!-- LEFT MESSAGE -->
+            <!-- ================================================= -->
+            <div class="space-y-10
+                 lg:col-span-4
+                 lg:pr-8">
+
+              <div class="reveal">
+
+                <span class="font-display text-4xl
+                     font-semibold text-teal`">
+                  01
+                </span>
+
+                <h3 class="mt-2 font-display
+                     text-2xl font-semibold
+                     text-black dark:text-white">
+                  Listen first.
+                </h3>
+
+                <p class="mt-3 text-sm leading-6
+                     text-black
+                     dark:text-white">
+                  Every family has a different story.
+                  We take the time to understand yours
+                  before creating a care plan.
+                </p>
+
+              </div>
+
+
+              <div class="reveal reveal-delay-1">
+
+                <span class="font-display text-4xl
+                     font-semibold text-teal">
+                  02
+                </span>
+
+                <h3 class="mt-2 font-display
+                     text-2xl font-semibold
+                     text-black dark:text-white">
+                  Respect deeply.
+                </h3>
+
+                <p class="mt-3 text-sm leading-6
+                     text-black
+                     dark:text-white">
+                  Independence, privacy, and dignity
+                  remain at the heart of every interaction.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CENTER IMAGE -->
+            <!-- ================================================= -->
+            <div class="relative z-10
+                 lg:col-span-4
+                 lg:col-start-5">
+
+              <div class="relative mx-auto
+                   h-[390px] w-[290px]
+                   overflow-hidden
+                   rounded-[9rem_9rem_2rem_2rem]
+                   sm:h-[500px]
+                   sm:w-[360px]
+                   reveal">
+
+                <img src="../assets/images/p20.jpg" alt="Amara caregiver spending time with a patient at home" class="h-full w-full object-cover
+                     transition duration-700
+                     hover:scale-105" />
+
+                <div class="absolute inset-0
+                     bg-gradient-to-t
+                     from-black/35
+                     via-transparent to-transparent"></div>
+
+
+                <!-- Image Label -->
+                <div class="absolute bottom-5
+                     left-5 right-5
+                     rounded-xl
+                     border border-white/15
+                     bg-black/20
+                     px-4 py-3
+                     backdrop-blur-md">
+
+                  <p class="text-[10px] font-bold
+                       uppercase tracking-[0.16em]
+                       text-white">
+                    Our philosophy
+                  </p>
+
+                  <p class="mt-1 font-display
+                       text-lg text-white">
+                    People before protocols.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT MESSAGE -->
+            <!-- ================================================= -->
+            <div class="space-y-10
+                 lg:col-span-4
+                 lg:col-start-9
+                 lg:pl-8">
+
+              <div class="reveal reveal-delay-2">
+
+                <span class="font-display text-4xl
+                     font-semibold text-teal">
+                  03
+                </span>
+
+                <h3 class="mt-2 font-display
+                     text-2xl font-semibold
+                     text-black dark:text-white">
+                  Show up consistently.
+                </h3>
+
+                <p class="mt-3 text-sm leading-6
+                     text-black
+                     dark:text-white">
+                  Familiar faces and dependable routines
+                  help create comfort and confidence over time.
+                </p>
+
+              </div>
+
+
+              <div class="reveal reveal-delay-3">
+
+                <span class="font-display text-4xl
+                     font-semibold text-teal">
+                  04
+                </span>
+
+                <h3 class="mt-2 font-display
+                     text-2xl font-semibold
+                     text-black dark:text-white">
+                  Keep families close.
+                </h3>
+
+                <p class="mt-3 text-sm leading-6
+                     text-black
+                     dark:text-white">
+                  Clear communication means families
+                  never feel left outside the care journey.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM CTA -->
+        <!-- ================================================= -->
+        <div class="mt-16 flex flex-col
+             items-center justify-center
+             gap-5 text-center
+             md:mt-20 reveal">
+
+          <p class="font-display text-xl
+               text-black dark:text-white
+               sm:text-2xl">
+            Because the best care
+            <span class="italic text-teal">
+              feels personal.
+            </span>
+          </p>
+
+          <a href="contact.html" class="group inline-flex
+               items-center gap-3
+               rounded-full bg-[#102522]
+               px-6 py-3.5
+               text-sm font-semibold text-white
+               transition duration-300
+               hover:-translate-y-1
+               hover:bg-teal
+               dark:bg-white
+               dark:text-[#102522]">
+            Start a Conversation
+
+            <span class="transition duration-300
+                 group-hover:translate-x-1">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================================= -->
+    <!-- ABOUT — OUR STORY / TIMELINE SECTION -->
+    <!-- ========================================================= -->
+    <section class="relative overflow-hidden bg-white py-20 dark:bg-[#101716] md:py-28 lg:py-32">
+
+      <div class="container-x">
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end reveal">
+
+          <div class="lg:col-span-7">
+
+            <span class="inline-flex items-center gap-3 text-[10px]
+                 font-bold uppercase tracking-[0.22em]
+                 text-teal sm:text-xs">
+              <span class="h-px w-8 bg-teal"></span>
+              Our Story
+            </span>
+
+            <h2 class="mt-5 max-w-3xl font-display
+                 text-4xl font-semibold leading-[1.04]
+                 text-black dark:text-white
+                 sm:text-5xl lg:text-6xl">
+              Built around a simple
+              <span class="italic text-teal">belief.</span>
+            </h2>
+
+          </div>
+
+          <p class="max-w-md text-sm leading-7
+               text-black dark:text-white
+               lg:col-span-5 lg:justify-self-end">
+            Great care is not only about treatment.
+            It is about feeling heard, respected, safe,
+            and supported throughout every stage of life.
+          </p>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- STORY AREA -->
+        <!-- ================================================= -->
+        <div class="relative mt-16 md:mt-20">
+
+          <!-- Vertical Line -->
+          <div class="absolute bottom-0 left-[19px] top-0
+               hidden w-px bg-black/10
+               dark:bg-white/10
+               sm:block"></div>
+
+
+          <!-- ================================================= -->
+          <!-- 01 -->
+          <!-- ================================================= -->
+          <div class="relative grid gap-8 pb-16
+               sm:grid-cols-[40px_1fr]
+               md:gap-12 md:pb-20
+               lg:grid-cols-[80px_1fr]">
+
+            <!-- Marker -->
+            <div class="relative z-10">
+
+              <div class="flex h-10 w-10 items-center
+                   justify-center rounded-full
+                   border border-teal
+                   bg-white text-xs font-bold
+                   text-teal
+                   dark:bg-[#101716]">
+                01
+              </div>
+
+            </div>
+
+
+            <!-- Content -->
+            <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
+
+              <div class="lg:col-span-7">
+
+                <p class="text-[10px] font-bold uppercase
+                     tracking-[0.18em] text-teal">
+                  Where it started
+                </p>
+
+                <h3 class="mt-3 font-display text-3xl
+                     font-semibold text-black
+                     dark:text-white sm:text-4xl">
+                  Care should feel personal.
+                </h3>
+
+                <p class="mt-5 max-w-xl text-sm leading-7
+                     text-black
+                     dark:text-white">
+                  Amara began with a simple observation:
+                  families wanted professional healthcare,
+                  but they also wanted the warmth, familiarity,
+                  and dignity of home.
+                </p>
+
+              </div>
+
+
+              <div class="lg:col-span-5">
+
+                <div class="relative overflow-hidden
+                     rounded-[2rem]">
+
+                 <div class="overflow-hidden rounded-2xl">
+  <img 
+    src="../assets/images/p21.jpg" 
+    alt="Caregiver supporting a senior at home" 
+    class="h-64 w-full object-cover transition duration-700 hover:scale-105 sm:h-72"
+  />
+</div>
+
+                  <div class="absolute inset-0
+                       bg-gradient-to-t
+                       from-black/30 to-transparent"></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================================================= -->
+          <!-- 02 -->
+          <!-- ================================================= -->
+          <div class="relative grid gap-8 pb-16
+               sm:grid-cols-[40px_1fr]
+               md:gap-12 md:pb-20
+               lg:grid-cols-[80px_1fr]">
+
+            <div class="relative z-10">
+
+              <div class="flex h-10 w-10 items-center
+                   justify-center rounded-full
+                   border border-teal
+                   bg-white text-xs font-bold
+                   text-teal
+                   dark:bg-[#101716]">
+                02
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <p class="text-[10px] font-bold uppercase
+                   tracking-[0.18em] text-teal">
+                What changed
+              </p>
+
+              <div class="mt-4 grid gap-8 lg:grid-cols-12">
+
+                <h3 class="font-display text-3xl
+                     font-semibold leading-tight
+                     text-black dark:text-white
+                     lg:col-span-5 sm:text-4xl">
+                  Healthcare became more human.
+                </h3>
+
+                <p class="max-w-xl text-sm leading-7
+                     text-black
+                     dark:text-white
+                     lg:col-span-6 lg:col-start-7">
+                  We brought clinical expertise and
+                  compassionate caregiving together,
+                  creating a service where medical needs
+                  and everyday wellbeing are treated as
+                  equally important.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================================================= -->
+          <!-- 03 -->
+          <!-- ================================================= -->
+          <div class="relative grid gap-8 pb-16
+               sm:grid-cols-[40px_1fr]
+               md:gap-12 md:pb-20
+               lg:grid-cols-[80px_1fr]">
+
+            <div class="relative z-10">
+
+              <div class="flex h-10 w-10 items-center
+                   justify-center rounded-full
+                   border border-teal
+                   bg-white text-xs font-bold
+                   text-teal
+                   dark:bg-[#101716]">
+                03
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <p class="text-[10px] font-bold uppercase
+                   tracking-[0.18em] text-teal">
+                Today
+              </p>
+
+              <h3 class="mt-3 max-w-2xl font-display
+                   text-3xl font-semibold
+                   leading-tight text-black
+                   dark:text-white sm:text-4xl">
+                A trusted team, close to home.
+              </h3>
+
+              <p class="mt-5 max-w-2xl text-sm leading-7
+                   text-black
+                   dark:text-white">
+                Today, Amara continues to connect families
+                with carefully selected professionals who
+                understand that exceptional care is measured
+                not only by outcomes, but by how people feel
+                along the way.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================================================= -->
+          <!-- FINAL STATEMENT -->
+          <!-- ================================================= -->
+          <div class="relative grid gap-8
+               sm:grid-cols-[40px_1fr]
+               md:gap-12
+               lg:grid-cols-[80px_1fr]">
+
+            <div class="relative z-10">
+
+              <div class="flex h-10 w-10 items-center
+                   justify-center rounded-full
+                   bg-teal text-xs font-bold
+                   text-white">
+                ✓
+              </div>
+
+            </div>
+
+
+            <div class="rounded-[2rem]
+                 bg-[#102522]
+                 px-7 py-10 text-white
+                 sm:px-10 sm:py-12
+                 lg:px-14 lg:py-14">
+
+              <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
+
+                <div class="lg:col-span-8">
+
+                  <p class="text-[10px] font-bold uppercase
+                       tracking-[0.2em]
+                       text-[#AFC8BE]">
+                    Our Promise
+                  </p>
+
+                  <h3 class="mt-4 max-w-3xl font-display
+                       text-3xl font-semibold
+                       leading-tight
+                       sm:text-4xl lg:text-4xl">
+                    Keep care professional.
+                    Keep it deeply human.
+                  </h3>
+
+                </div>
+
+
+                <div class="lg:col-span-4 lg:justify-self-end">
+
+                  <a href="contact.html" class="group inline-flex items-center
+                       gap-3 rounded-full bg-white
+                       px-6 py-3.5 text-sm
+                       font-semibold text-[#102522]
+                       transition duration-300
+                       hover:-translate-y-1
+                       hover:bg-[#AFC8BE]">
+                    Meet Our Team
+
+                    <span class="transition duration-300
+                         group-hover:translate-x-1">
+                      →
+                    </span>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ============ SECTION 7 — CTA ============ -->
+    <section class="pb-20 md:pb-28">
+      <div class="container-x">
+        <div class="bg-teal-soft rounded-[var(--radius-lg)] px-8 py-14 md:p-16 text-center reveal">
+          <h2 class="font-display text-3xl md:text-4xl font-semibold text-black dark:text-white max-w-lg mx-auto">Meet
+            the team that could be caring for your family</h2>
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a href="caregivers.html" class="btn btn-primary">Meet Our Caregivers</a>
+            <a href="contact.html" class="btn btn-outline border-black dark:border-white">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="bg-navy dark:bg-black">
+    <div class="container-x py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+
+        <div class="md:col-span-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="19" cy="19" r="19" fill="#F2ECDF" />
+              <path d="M8 20h5.5l3-7 4.5 14 3-7H30" stroke="#16324D" stroke-width="2.2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="leading-tight">
+              <span class="block font-display text-lg font-semibold text-white">Amara</span>
+              <span class="block text-[11px] tracking-[0.18em] uppercase text-white -mt-0.5">Home Care</span>
+            </span>
+          </a>
+          <p class="mt-5 text-sm text-white leading-relaxed max-w-xs">
+            Licensed nursing and personal care delivered in the comfort of home, guided by qualified caregivers your
+            family can trust.
+          </p>
+          <div class="flex items-center gap-3 mt-6">
+            <a href="#" aria-label="Facebook"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.5 0-4.2 1.5-4.2 4.3v2.5H7.3V13h2.7v8h3.5z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.2" cy="6.8" r="1" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn"
+              class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-white hover:border-white/50 transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2 2 0 110 4 2 2 0 010-4zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.8c0-1.38-.02-3.15-1.92-3.15-1.93 0-2.22 1.5-2.22 3.05V21h-4z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <p class="text-white text-sm font-semibold mb-4">Explore</p>
+          <ul class="space-y-2.5 text-sm text-white">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home 1</a></li>
+            <li><a href="home-2.html" class="hover:text-white transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="caregivers.html" class="hover:text-white transition-colors">Caregivers</a></li>
+            <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="text-white text-sm font-semibold mb-4">Care Services</p>
+          <ul class="space-y-2.5 text-sm text-white">
+            <li><a href="services.html" class="hover:text-white transition-colors">Post-Surgery Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Elderly Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Physiotherapy Assistance</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">IV Care</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Wound Dressing</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="text-white text-sm font-semibold mb-4">Reach Our Care Team</p>
+          <ul class="space-y-3 text-sm text-white">
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path
+                  d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 2.9a2 2 0 01-.4 2.1L8 10a16 16 0 006 6l1.3-1.4a2 2 0 012.1-.4c.9.4 1.9.6 2.9.7a2 2 0 011.7 2z" />
+              </svg>
+              <span>+1 (800) 555-0138 — 24/7 Care Line</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path d="M4 5h16v14H4z" />
+                <path d="M4 6l8 7 8-7" />
+              </svg>
+              <span>care@amarahomecare.example</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <path d="M12 21s7-6.3 7-11.5A7 7 0 105 9.5C5 14.7 12 21 12 21z" />
+                <circle cx="12" cy="9.5" r="2.3" />
+              </svg>
+              <span>Serving the greater metro area &amp; suburbs</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.2 1.9" />
+              </svg>
+              <span>Care office: Mon–Sat, 8am–7pm · Emergency line 24/7</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white">© <span data-year>2026</span> Amara Home Care. All rights reserved.</p>
+        <div class="flex items-center gap-5 text-xs text-white">
+          <a class="hover:text-white transition-colors">Privacy Policy</a>
+          <a class="hover:text-white transition-colors">Terms of Service</a>
+          <a class="hover:text-white transition-colors">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5" />
+      <path d="M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
