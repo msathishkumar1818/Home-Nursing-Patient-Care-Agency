@@ -107,6 +107,7 @@
 
         <!-- Right controls -->
         <div class="flex items-center gap-2.5 shrink-0">
+          <a href="login.html" class="btn btn-primary text-sm">Login</a>
           <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode"
             class="icon-toggle hidden sm:inline-flex">
             <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -159,6 +160,7 @@
             class="py-3 text-sm font-semibold text-ink border-t border-line nav-link active">Caregivers</a>
           <a href="pricing.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Pricing</a>
           <a href="contact.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Contact</a>
+          <a href="login.html" class="py-3 text-sm font-semibold text-ink border-t border-line">Login</a>
 
           <div class="flex items-center gap-3 pt-4 border-t border-line mt-2">
             <button type="button" data-theme-toggle class="icon-toggle">
@@ -494,7 +496,7 @@
                  sm:rounded-[2.5rem]">
 
           <img
-            src="../assets/images/p40.jpg"
+            src="assets/images/p40.jpg"
             alt="Amara caregiver supporting a senior at home"
             class="h-[360px]
                    w-full
@@ -667,7 +669,7 @@
       <div class="container-x">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="card overflow-hidden reveal">
-            <img src="../assets/images/p28.jpg" class="w-full h-70 object-cover"
+            <img src="assets/images/p28.jpg" class="w-full h-70 object-cover"
               alt="Portrait of Renee A., Registered Nurse" />
             <div class="p-5">
               <p class="font-semibold text-black dark:text-white">Renee A.</p>
@@ -680,7 +682,7 @@
             </div>
           </div>
           <div class="card overflow-hidden reveal reveal-delay-1">
-            <img src="../assets/images/p29.jpg" class="w-full h-70 object-cover"
+            <img src="assets/images/p29.jpg" class="w-full h-70 object-cover"
               alt="Portrait of Marcus T., Licensed Practical Nurse" />
             <div class="p-5">
               <p class="font-semibold text-black dark:text-white">Marcus T.</p>
@@ -693,7 +695,7 @@
             </div>
           </div>
           <div class="card overflow-hidden reveal reveal-delay-2">
-            <img src="../assets/images/p30.jpg" class="w-full h-70 object-cover"
+            <img src="assets/images/p30.jpg" class="w-full h-70 object-cover"
               alt="Portrait of Aisha B., Physiotherapy Aide" />
             <div class="p-5">
               <p class="font-semibold text-black dark:text-white">Aisha B.</p>
@@ -706,7 +708,7 @@
             </div>
           </div>
           <div class="card overflow-hidden reveal reveal-delay-3">
-            <img src="../assets/images/p31.jpg" class="w-full h-70 object-cover"
+            <img src="assets/images/p31.jpg" class="w-full h-70 object-cover"
               alt="Portrait of James O., Registered Nurse" />
             <div class="p-5">
               <p class="font-semibold text-black dark:text-white">James O.</p>
@@ -792,7 +794,7 @@
       class="absolute left-0 top-0 h-[400px] w-[82%] overflow-hidden rounded-[2rem] sm:h-[470px] lg:h-[570px]">
 
       <img
-        src="../assets/images/p32.jpg"
+        src="assets/images/p32.jpg"
         alt="Professional caregiver preparing for a home care visit"
         class="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
       >
@@ -805,7 +807,7 @@
       class="absolute bottom-0 right-0 h-[180px] w-[52%] overflow-hidden rounded-[1.75rem] border-8 border-[#F2EFE8] shadow-xl dark:border-[#111817] sm:h-[210px] lg:h-[220px]">
 
       <img
-        src="../assets/images/p41.jpg"
+        src="assets/images/p41.jpg"
         alt="Care professional reviewing patient care information"
         class="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
       >
@@ -1464,9 +1466,11 @@
           five checkpoints</h2>
 
         <div class="thread-horizontal relative mt-16">
-          <svg class="absolute top-8 left-0 w-full h-4" viewBox="0 0 1000 20" preserveAspectRatio="none" fill="none">
-            <path class="thread-line" d="M20 10 H980" stroke-dasharray="2 10" stroke-linecap="round" />
-          </svg>
+          <div class="absolute left-0 w-full pointer-events-none" style="top: 8px; transform: translateY(-50%); height: 2px;">
+            <svg class="w-full h-full" viewBox="0 0 1000 2" preserveAspectRatio="none" fill="none">
+              <path class="thread-line" d="M100 1 H900" stroke-dasharray="4 10" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            </svg>
+          </div>
           <div class="relative grid grid-cols-5 gap-4">
             <div class="text-center reveal"><span
                 class="mx-auto w-4 h-4 rounded-full bg-teal block mb-6 relative z-10 ring-4 ring-[var(--bg-alt)]"></span>
@@ -1574,9 +1578,9 @@
            bg-[#102522] sm:min-h-[440px] lg:col-span-5 lg:min-h-[560px]">
 
         <img
-          src="../assets/images/p33.jpg"
+          src="assets/images/p33.jpg"
           alt="Amara caregiver providing compassionate home care"
-          class="h-full w-full object-contain object-center
+          class="h-full w-full object-cover object-center
                  transition duration-700
                  hover:scale-[1.02]"
         />
@@ -1726,10 +1730,10 @@
              dark:bg-white/5">
 
           <img
-            src="../assets/images/p34.jpg"
+            src="assets/images/p34.jpg"
             alt="Home care nurse"
             loading="lazy"
-            class="h-full w-full object-contain object-center
+            class="h-full w-full object-cover object-center
                    transition duration-700
                    group-hover:scale-[1.02]"
           />
@@ -1801,10 +1805,10 @@
              dark:bg-white/5">
 
           <img
-            src="../assets/images/p35.jpg"
+            src="assets/images/p35.jpg"
             alt="Compassionate elderly caregiver"
             loading="lazy"
-            class="h-full w-full object-contain object-center
+            class="h-full w-full object-cover object-center
                    transition duration-700
                    group-hover:scale-[1.02]"
           />
@@ -1876,10 +1880,10 @@
              dark:bg-white/5">
 
           <img
-            src="../assets/images/p36.jpg"
+            src="assets/images/p36.jpg"
             alt="Professional home healthcare caregiver"
             loading="lazy"
-            class="h-full w-full object-contain object-center
+            class="h-full w-full object-cover object-center
                    transition duration-700
                    group-hover:scale-[1.02]"
           />
@@ -2038,7 +2042,7 @@
 
             <div class="relative">
 
-              <img src="../assets/images/p37.jpg" alt="Amara caregiver spending time with an elderly client" class="h-[430px] w-full object-cover
+              <img src="assets/images/p37.jpg" alt="Amara caregiver spending time with an elderly client" class="h-[430px] w-full object-cover
                    sm:h-[560px]
                    lg:h-[650px]" />
 
@@ -2366,7 +2370,7 @@
       <div class="overflow-hidden rounded-[2.5rem]">
 
         <img
-          src="../assets/images/p38.jpg"
+          src="assets/images/p38.jpg"
           alt="Care coordinator helping a family find the right caregiver"
           class="h-[300px] w-full object-cover transition duration-[1200ms] hover:scale-105 sm:h-[430px] lg:h-[540px]"
         />

@@ -326,7 +326,19 @@ h4,
 }
 
 #site-header .btn {
-  padding: .65rem 1.25rem;
+  padding: .5rem 1.15rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+html.dark .btn-primary {
+  color: #0E1613;
+  background: var(--navy);
+}
+
+html.dark .btn-primary:hover {
+  background: #BFD7EC;
+  color: #0E1613;
 }
 
 #site-header .icon-toggle {
@@ -446,13 +458,34 @@ html.dark #mobile-menu>nav>a {
 
 /* mobile menu */
 #mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
   max-height: 0;
   overflow: hidden;
-  transition: max-height .4s ease;
+  transition: max-height .35s ease;
+  z-index: 70;
+}
+
+#mobile-menu > nav {
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  #mobile-menu > nav {
+    padding-inline: 1.5rem;
+  }
 }
 
 #mobile-menu.open {
-  max-height: 900px;
+  max-height: calc(100svh - 58px);
+  overflow-y: auto;
 }
 
 /* ---------- page loader ---------- */
