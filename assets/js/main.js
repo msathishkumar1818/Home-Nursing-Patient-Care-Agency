@@ -68,31 +68,62 @@
   function setMenu(open) {
     if (!mobileMenu) return;
     mobileMenu.classList.toggle("open", open);
-    if (menuToggle) menuToggle.setAttribute("aria-expanded", open);
+    if (menuToggle) menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
     if (menuIconOpen) menuIconOpen.classList.toggle("hidden", open);
     if (menuIconClose) menuIconClose.classList.toggle("hidden", !open);
     document.body.style.overflow = open ? "hidden" : "";
   }
 
   if (menuToggle) {
-    menuToggle.addEventListener("click", function () {
-      var isOpen = mobileMenu.classList.contains("open");
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = mobileMenu && mobileMenu.classList.contains("open");
       setMenu(!isOpen);
     });
   }
+
+  /* Close mobile menu when any navigation link inside it is clicked */
+  if (mobileMenu) {
+    var mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenu(false);
+      });
+    });
+  }
+
+  /* Close menu when clicking outside */
+  document.addEventListener("click", function (e) {
+    if (mobileMenu && mobileMenu.classList.contains("open")) {
+      if (!mobileMenu.contains(e.target) && (!menuToggle || !menuToggle.contains(e.target))) {
+        setMenu(false);
+      }
+    }
+  });
 
   /* mobile "Home" sub-dropdown */
   var mobileHomeToggle = document.querySelector("[data-mobile-home-toggle]");
   var mobileHomePanel = document.querySelector("[data-mobile-home-panel]");
   if (mobileHomeToggle && mobileHomePanel) {
-    mobileHomeToggle.addEventListener("click", function () {
+    mobileHomeToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
       var isHidden = mobileHomePanel.classList.contains("hidden");
       mobileHomePanel.classList.toggle("hidden", !isHidden);
-      mobileHomeToggle.querySelector("[data-chevron]").classList.toggle("rotate-180", isHidden);
+      var chevron = mobileHomeToggle.querySelector("[data-chevron]");
+      if (chevron) {
+        chevron.classList.toggle("rotate-180", isHidden);
+      }
     });
   }
 
-  /* desktop dropdown keyboard support (Esc to close) */
+  /* Close menu on window resize if larger than 1024px */
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1024 && mobileMenu && mobileMenu.classList.contains("open")) {
+      setMenu(false);
+    }
+  });
+
+  /* dropdown keyboard support (Esc to close) */
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       setMenu(false);

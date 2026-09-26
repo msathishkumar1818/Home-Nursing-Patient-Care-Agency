@@ -70,7 +70,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden lg:flex items-center gap-8 mx-auto" aria-label="Primary">
+        <nav class="desktop-nav items-center gap-8 mx-auto" aria-label="Primary">
           <div class="dropdown-wrap relative">
             <button class="nav-link active flex items-center gap-1.5" aria-haspopup="true">
               Home
@@ -85,32 +85,32 @@
                   class="flex items-start gap-3 p-3 rounded-xl nav-link active hover:bg-alt transition-colors">
                   <span class="mt-1 w-2 h-2 rounded-full bg-teal shrink-0"></span>
                   <span>
-                    <span class="block text-sm font-semibold text:black dark:text-white">Home 1 — Trusted Care</span>
-                    <span class="block text-xs text:mute mt-0.5">Warm, editorial introduction</span>
+                    <span class="block text-sm font-semibold text-ink dark:text-white">Home 1 — Trusted Care</span>
+                    <span class="block text-xs text-ink-mute mt-0.5">Warm, editorial introduction</span>
                   </span>
                 </a>
                 <a href="home-2.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-alt transition-colors">
                   <span class="mt-1 w-2 h-2 rounded-full bg-sage shrink-0"></span>
                   <span>
-                    <span class="block text-sm font-semibold text:black dark:text-white">Home 2 — Modern Care</span>
-                    <span class="block text-xs text:mute mt-0.5">Bold, story-driven layout</span>
+                    <span class="block text-sm font-semibold text-ink dark:text-white">Home 2 — Modern Care</span>
+                    <span class="block text-xs text-ink-mute mt-0.5">Bold, story-driven layout</span>
                   </span>
                 </a>
               </div>
             </div>
           </div>
-          <a href="about.html" class="nav-link text:black dark:text-white ">About Us</a>
-          <a href="services.html" class="nav-link text:black dark:text-white">Services</a>
-          <a href="caregivers.html" class="nav-link text:black dark:text-white">Caregivers</a>
-          <a href="pricing.html" class="nav-link text:black dark:text-white">Pricing</a>
-          <a href="contact.html" class="nav-link text:black dark:text-white">Contact</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="caregivers.html" class="nav-link">Caregivers</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </nav>
 
         <!-- Right controls -->
         <div class="flex items-center gap-2.5 shrink-0">
-          <a href="login.html" class="btn btn-primary text-sm">Login</a>
+          <!-- Theme toggle (Desktop) -->
           <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode"
-            class="icon-toggle hidden sm:inline-flex">
+            class="icon-toggle header-desktop-control">
             <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
                 stroke-linejoin="round" />
@@ -122,13 +122,16 @@
                 stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
             </svg>
           </button>
+          <!-- RTL toggle (Desktop) -->
           <button type="button" data-dir-toggle aria-label="Toggle text direction"
-            class="icon-toggle hidden sm:inline-flex text-[11px] font-semibold">
+            class="icon-toggle header-desktop-control text-[11px] font-semibold">
             <span data-dir-label>RTL</span>
           </button>
-          <!-- Mobile menu toggle -->
+          <!-- Login CTA (Desktop - LAST CONTROL) -->
+          <a href="login.html" class="btn btn-primary text-sm header-desktop-control">Login</a>
+          <!-- Mobile / Tablet menu toggle -->
           <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"
-            aria-label="Toggle menu" class="icon-toggle lg:hidden">
+            aria-label="Toggle menu" class="icon-toggle header-mobile-control">
             <svg data-menu-icon-open width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
             </svg>
@@ -139,12 +142,12 @@
         </div>
       </div>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="lg:hidden">
+      <!-- Mobile / Tablet menu -->
+      <div id="mobile-menu">
         <nav class="flex flex-col gap-1 pb-6 pt-2 border-t border-line" aria-label="Mobile primary">
           <button type="button" data-mobile-home-toggle
-            class="flex items-center justify-between py-3 nav-link active text-sm font-semibold text:black dark:text-white">
-            Home
+            class="flex items-center justify-between py-3 nav-link active text-sm font-semibold text-ink dark:text-white">
+            <span>Home</span>
             <svg data-chevron class="transition-transform duration-200" width="11" height="7" viewBox="0 0 11 7"
               fill="none">
               <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
@@ -152,25 +155,25 @@
             </svg>
           </button>
           <div data-mobile-home-panel class="hidden pl-4 pb-2 flex flex-col gap-1">
-            <a href="index.html" class="py-2.5 text-sm text:black dark:text-white nav-link active">Home 1 — Trusted
+            <a href="index.html" class="py-2.5 text-sm text-ink-soft dark:text-ink-mute nav-link active">Home 1 — Trusted
               Care</a>
-            <a href="home-2.html" class="py-2.5 text-sm text:black dark:text-white">Home 2 — Modern Care</a>
+            <a href="home-2.html" class="py-2.5 text-sm text-ink-soft dark:text-ink-mute">Home 2 — Modern Care</a>
           </div>
-          <a href="about.html" class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">About
+          <a href="about.html" class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">About
             Us</a>
           <a href="services.html"
-            class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">Services</a>
+            class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">Services</a>
           <a href="caregivers.html"
-            class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">Caregivers</a>
+            class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">Caregivers</a>
           <a href="pricing.html"
-            class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">Pricing</a>
+            class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">Pricing</a>
           <a href="contact.html"
-            class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">Contact</a>
+            class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">Contact</a>
           <a href="login.html"
-            class="py-3 text-sm font-semibold text:black dark:text-white border-t border-line">Login</a>
+            class="py-3 text-sm font-semibold text-ink dark:text-white border-t border-line">Login</a>
 
           <div class="flex items-center gap-3 pt-4 border-t border-line mt-2">
-            <button type="button" data-theme-toggle class="icon-toggle">
+            <button type="button" data-theme-toggle class="icon-toggle" aria-label="Toggle dark mode">
               <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7"
                   stroke-linejoin="round" />
@@ -182,7 +185,7 @@
                   stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
               </svg>
             </button>
-            <button type="button" data-dir-toggle class="icon-toggle text-[11px] font-semibold">
+            <button type="button" data-dir-toggle class="icon-toggle text-[11px] font-semibold" aria-label="Toggle text direction">
               <span data-dir-label>RTL</span>
             </button>
           </div>
@@ -1903,43 +1906,49 @@
           <h2 class="font-display text-3xl md:text-4xl font-semibold text-black dark:text-white mt-4">Stories from homes
             we've cared for</h2>
         </div>
-        <div class="grid md:grid-cols-3 gap-6 mt-14">
-          <div class="card p-7 reveal">
-            <span class="quote-mark">"</span>
-            <p class="text:black dark:text-white text-sm leading-relaxed -mt-4">The nurse who cared for my father after
-              his surgery treated him like family. We finally felt at ease leaving him for a few hours.</p>
-            <div class="flex items-center gap-3 mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 items-stretch">
+          <div class="card p-7 reveal flex flex-col justify-between h-full">
+            <div class="flex-1 flex flex-col">
+              <span class="quote-mark select-none block leading-none mb-3">“</span>
+              <p class="text-ink dark:text-white text-sm leading-relaxed flex-1">The nurse who cared for my father after
+                his surgery treated him like family. We finally felt at ease leaving him for a few hours.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-line/60">
               <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop"
-                class="w-10 h-10 rounded-full object-cover" alt="Portrait of Sarah M." />
-              <div>
-                <p class="text-sm font-semibold text:black dark:text-white">Sarah M.</p>
-                <p class="text-xs text:black dark:text-white">Daughter of a patient</p>
+                class="w-11 h-11 rounded-full object-cover shrink-0 ring-2 ring-teal/20" alt="Portrait of Sarah M." />
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold text-ink dark:text-white truncate">Sarah M.</p>
+                <p class="text-xs text-ink-soft dark:text-ink-mute truncate">Daughter of a patient</p>
               </div>
             </div>
           </div>
-          <div class="card p-7 reveal reveal-delay-1">
-            <span class="quote-mark">"</span>
-            <p class="text:black dark:text-white text-sm leading-relaxed -mt-4">Scheduling was effortless and the
-              caregiver matched to my mother's personality perfectly. Communication has been outstanding throughout.</p>
-            <div class="flex items-center gap-3 mt-6">
+          <div class="card p-7 reveal reveal-delay-1 flex flex-col justify-between h-full">
+            <div class="flex-1 flex flex-col">
+              <span class="quote-mark select-none block leading-none mb-3">“</span>
+              <p class="text-ink dark:text-white text-sm leading-relaxed flex-1">Scheduling was effortless and the
+                caregiver matched to my mother's personality perfectly. Communication has been outstanding throughout.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-line/60">
               <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
-                class="w-10 h-10 rounded-full object-cover" alt="Portrait of Daniel O." />
-              <div>
-                <p class="text-sm font-semibold text:black dark:text-white">Daniel O.</p>
-                <p class="text-xs text:black dark:text-white">Son of a patient</p>
+                class="w-11 h-11 rounded-full object-cover shrink-0 ring-2 ring-teal/20" alt="Portrait of Daniel O." />
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold text-ink dark:text-white truncate">Daniel O.</p>
+                <p class="text-xs text-ink-soft dark:text-ink-mute truncate">Son of a patient</p>
               </div>
             </div>
           </div>
-          <div class="card p-7 reveal reveal-delay-2">
-            <span class="quote-mark">"</span>
-            <p class="text:black dark:text-white text-sm leading-relaxed -mt-4">My recovery at home was faster than
-              expected — the wound care team was precise, punctual, and genuinely kind.</p>
-            <div class="flex items-center gap-3 mt-6">
+          <div class="card p-7 reveal reveal-delay-2 flex flex-col justify-between h-full md:col-span-2 lg:col-span-1">
+            <div class="flex-1 flex flex-col">
+              <span class="quote-mark select-none block leading-none mb-3">“</span>
+              <p class="text-ink dark:text-white text-sm leading-relaxed flex-1">My recovery at home was faster than
+                expected — the wound care team was precise, punctual, and genuinely kind.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-line/60">
               <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=100&auto=format&fit=crop"
-                class="w-10 h-10 rounded-full object-cover" alt="Portrait of Priya K." />
-              <div>
-                <p class="text-sm font-semibold text:black dark:text-white">Priya K.</p>
-                <p class="text-xs text:black dark:text-white">Patient</p>
+                class="w-11 h-11 rounded-full object-cover shrink-0 ring-2 ring-teal/20" alt="Portrait of Priya K." />
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold text-ink dark:text-white truncate">Priya K.</p>
+                <p class="text-xs text-ink-soft dark:text-ink-mute truncate">Patient</p>
               </div>
             </div>
           </div>

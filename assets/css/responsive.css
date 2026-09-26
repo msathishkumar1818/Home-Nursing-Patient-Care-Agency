@@ -31,26 +31,25 @@
   }
 }
 
-/* Ensure the sticky header never wraps to two lines */
-@media (min-width:1024px) {
+/* Ensure the sticky header never wraps to two lines on desktop */
+@media (min-width:1025px) {
   #site-header .header-row {
     flex-wrap: nowrap;
   }
 }
 
-/* Mobile menu touch targets */
-@media (max-width:1023px) {
-
+/* Mobile & tablet menu touch targets */
+@media (max-width:1024px) {
   #mobile-menu a,
   #mobile-menu button {
     min-height: 44px;
   }
 }
 
-/* Keep the open mobile menu usable on short screens. */
-@media (max-width:1023px) {
+/* Keep the open mobile menu usable on short screens */
+@media (max-width:1024px) {
   #mobile-menu.open {
-    max-height: calc(100svh - 58px);
+    max-height: calc(100svh - 64px);
     overflow-y: auto;
   }
 }
